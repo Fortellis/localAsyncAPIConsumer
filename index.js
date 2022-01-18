@@ -9,7 +9,7 @@ const fs = require('fs');
 
 app.use(bodyParser.json({ extended: true }), express.json());
 
-app.post('/hello/world', function (req, res) {
+app.post('/hello/world/event', function (req, res) {
   console.log(req.body);
   res.status(202);
   res.send(req.body);
