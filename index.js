@@ -12,7 +12,7 @@ app.use(bodyParser.json({ extended: true }), express.json());
 app.post('/hello/world/event', function (req, res) {
   console.log(req.body);
   res.status(202);
-  res.send(req.body);
+  res.send('');
   fs.readFile('./queue.json', 'utf-8', function (err, data) {
     if (err) throw err;
     const arrayOfObjects = JSON.parse(data);
